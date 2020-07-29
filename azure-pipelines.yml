@@ -12,6 +12,7 @@ steps:
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     useXcpretty: 'false'
     args: '-archivePath $(agent.buildDirectory)/HelloiOS'
+    xcodeVersion: '9'
 
 - task: ArchiveFiles@2
   displayName: 'Package .xcarchive into a zip file'
