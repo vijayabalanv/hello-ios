@@ -1,4 +1,5 @@
 pool:
+
   vmImage: 'macOS 10.14'
 
 steps:
@@ -25,4 +26,12 @@ steps:
     pathToPublish: '$(build.artifactStagingDirectory)/HelloiOS.xcarchive.zip'
     artifactName: 'xcarchive-files'
     artifactType: 'container'
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'IOS-ios'
+    appFile: 
+    symbolsIncludeParentDirectory: true
+    releaseNotesOption: 'input'
+    destinationType: 'groups'
 
