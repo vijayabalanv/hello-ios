@@ -23,7 +23,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     #sourceFolder: "$(system.defaultworkingdirectory)/archive"
-    sourceFolder: $(Build.SourcesDirectory)/archive
+    sourceFolder: '$(Build.SourcesDirectory)'
     contents: '*/.ipa'
     targetFolder: '$(build.artifactStagingDirectory)'
 
