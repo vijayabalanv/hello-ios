@@ -27,11 +27,11 @@ steps:
     artifactName: 'xcarchive-files'
     artifactType: 'container'
 
-- task: AppCenterDistribute@3
-  inputs:
-    serverEndpoint: 'IOS-ios'
-    appFile: 
-    symbolsIncludeParentDirectory: true
-    releaseNotesOption: 'input'
-    destinationType: 'groups'
+#- task: AppCenterDistribute@3
+#  inputs:
+#    serverEndpoint: 'IOS-ios'
+#    appFile: 
+#    symbolsIncludeParentDirectory: true
+#    releaseNotesOption: 'input'
+#    destinationType: 'groups'
 
