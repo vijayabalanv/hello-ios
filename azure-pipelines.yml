@@ -19,6 +19,12 @@ steps:
   inputs:
     rootFolderOrFile: '$(agent.buildDirectory)/HelloiOS.xcarchive/'
     archiveFile: '$(build.artifactStagingDirectory)/HelloiOS.xcarchive.zip'
+    
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: "$(system.defaultworkingdirectory)/archive"
+    contents: '*/.ipa'
+    targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
